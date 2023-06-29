@@ -4,7 +4,7 @@ export interface FetchWelcomeData {
 	websites: Website[];
 }
 
-interface Job {
+export interface Job {
 	id: number;
 	reference: string;
 	name: string;
@@ -86,7 +86,7 @@ enum Sk {
 	ZmluvaNaDobuUrčitú = 'Zmluva na dobu určitú',
 }
 
-interface CreatedAt {
+export interface CreatedAt {
 	fr: string;
 	en: string;
 }

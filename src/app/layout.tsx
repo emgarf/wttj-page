@@ -15,10 +15,7 @@ const theme = createTheme();
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<WuiProvider
-				theme={theme}
-				hasGlobalStyle
-			>
+			<WuiProvider theme={theme} hasGlobalStyle>
 				<body className={inter.className}>{children}</body>
 			</WuiProvider>
 		</html>

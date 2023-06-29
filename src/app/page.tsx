@@ -16,27 +16,14 @@ export default function Home() {
 		return isLoading ? (
 			<div> Loading ... </div>
 		) : (
-			<Box
-				display="flex"
-				w="100%"
-				justifyContent="center"
-				alignItems="center"
-				flexWrap="wrap"
-			>
+			<Box display="flex" w="100%" justifyContent="center" alignItems="center" flexWrap="wrap">
 				{data?.jobs.map((result) => {
-					return (
-						<Offer
-							key={result.id}
-							name={result.name}
-							officeName={result.office.name}
-							contractType={result.contract_type.en}
-							websitesUrls={result.websites_urls}
-						></Offer>
-					);
+					console.log(result);
+					return <Offer key={result.id} data={result}></Offer>;
 				})}
 			</Box>
 		);
 	};
 
-	return <main className={styles.main}>{fetchedContent()}</main>;
+	return <Box p="xl">{fetchedContent()}</Box>;
 }

@@ -2,18 +2,31 @@
 import { Box } from '@welcome-ui/box';
 import { Button } from '@welcome-ui/button';
 import { Text } from '@welcome-ui/text';
-import { WebsitesURL } from '../interface';
+import { Job, WebsitesURL } from '../interface';
 import { Icons } from '@welcome-ui/icons.font';
+import { Modal, useModalState } from '@welcome-ui/modal';
+import OfferModal from './modal';
+import moment from 'moment';
 
-interface Props {
-	name: string;
-	officeName: string;
-	contractType: string;
-	websitesUrls: WebsitesURL[];
-}
+export default function Offer({ data }: { data: Job }) {
+	const {
+		websites_urls,
+		contract_type,
+		office,
+		name,
+		published_at,
+		created_at,
+		description,
+		recruitment_process,
+		profile,
+	} = data;
 
-export default function Offer({ name, officeName, contractType, websitesUrls }: Props) {
-	const wttjUrl = websitesUrls.filter((url) => url.website_reference === 'wttj_fr');
+	const wttjUrl = websites_urls.filter((url: WebsitesURL) => url.website_reference === 'wttj_fr');
+	const modal = useModalState();
+
+	const onCloseModal = () => {
+		modal.hide();
+	};
 
 	return (
 		<Box
@@ -26,59 +39,51 @@ export default function Offer({ name, officeName, contractType, websitesUrls }: 
 			borderRadius="sm"
 			margin="sm"
 			minWidth="100%"
+			flexWrap={{ _: 'wrap', md: 'nowrap' }}
 		>
 			<Box p="md">
-				<Text
-					variant="h3"
-					m="0"
-				>
+				<Text variant="h3" m="0">
 					{name}
 				</Text>
-				<Box
-					mx="0"
-					mt="md"
-					mb="0"
-					display="flex"
-					alignItems="center"
-				>
-					<Text
-						m="0"
-						mr="lg"
-						display="flex"
-						alignItems="center"
-					>
+
+				<Box mx="0" mt="md" mb="0" display="flex" flexWrap="wrap" alignItems="center">
+					<Text m="0" mr="lg" display="flex" alignItems="center">
 						<Icons.Copy mr="xxs" />
-						{contractType}
+						{contract_type.en}
 					</Text>
-					<Text
-						m="0"
-						display="flex"
-						alignItems="center"
-					>
+
+					<Text m="0" mr="lg" display="flex" alignItems="center">
 						<Icons.Map mr="xxs" />
-						{officeName}
+						{office.name}
+					</Text>
+
+					<Text m="0" display="flex" alignItems="center">
+						<Icons.Clock mr="xxs" />
+						{moment(published_at).fromNow()}
 					</Text>
 				</Box>
 			</Box>
-			<Box
-				p="md"
-				display="flex"
-				alignItems="center"
-			>
-				<Button
-					variant="tertiary"
-					mr="lg"
-				>
+
+			<Box p="md" display="flex" alignItems="center">
+				<Modal.Trigger as={Button} {...modal} variant="tertiary" mr="lg">
 					See more
-				</Button>
-				<Button
-					variant="secondary"
-					as="a"
-					href={wttjUrl[0].url}
-				>
+				</Modal.Trigger>
+
+				<Button variant="secondary" as="a" href={wttjUrl[0].url}>
 					Apply
 				</Button>
 			</Box>
+
+			<OfferModal
+				modalState={modal}
+				name={name}
+				createdAt={created_at}
+				description={description}
+				recruitment={recruitment_process}
+				profile={profile}
+				url={wttjUrl}
+				onClick={onCloseModal}
+			/>
 		</Box>
 	);
 }
