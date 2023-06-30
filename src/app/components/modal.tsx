@@ -30,7 +30,15 @@ export default function OfferModal({
 	return (
 		<Modal state={modalState} ariaLabel="Welcome" size="lg" tabIndex={0}>
 			<Modal.Content p="xxl">
-				<Modal.Header title={name} p="0" mb="0" borderWidth="0 0 1px 0" borderColor="#E1E1E1" borderStyle="solid" />
+				<Modal.Header
+					title={name}
+					p="0"
+					pr="xxl"
+					mb="0"
+					borderWidth="0 0 1px 0"
+					borderColor="#E1E1E1"
+					borderStyle="solid"
+				/>
 
 				<Modal.Body pr="0">
 					<Text variant="meta2" mb="0">
@@ -39,7 +47,7 @@ export default function OfferModal({
 
 					<Box pb="md">
 						<Text
-							variant="h3"
+							variant="h4"
 							display="flex"
 							pb="sm"
 							alignItems="center"
@@ -47,16 +55,16 @@ export default function OfferModal({
 							borderColor="#E1E1E1"
 							borderStyle="solid"
 						>
-							<Icons.Remove color="#ffcd00" size="xl" mr="xs"></Icons.Remove>
+							<Icons.Remove color="#ffcd00" size="lg" mr="xs"></Icons.Remove>
 							Job Description:
 						</Text>
-						<Text dangerouslySetInnerHTML={{ __html: description }}></Text>
+						<Text dangerouslySetInnerHTML={{ __html: description }} lineHeight="1.8"></Text>
 					</Box>
 
 					{recruitment?.length > 50 && (
 						<Box pb="md">
 							<Text
-								variant="h3"
+								variant="h4"
 								display="flex"
 								pb="sm"
 								alignItems="center"
@@ -64,17 +72,17 @@ export default function OfferModal({
 								borderColor="#E1E1E1"
 								borderStyle="solid"
 							>
-								<Icons.Remove color="#ffcd00" size="xl" mr="xs"></Icons.Remove>
+								<Icons.Remove color="#ffcd00" size="lg" mr="xs"></Icons.Remove>
 								Recruitment process:
 							</Text>
-							<Text dangerouslySetInnerHTML={{ __html: recruitment }}></Text>
+							<Text dangerouslySetInnerHTML={{ __html: recruitment }} lineHeight="1.8"></Text>
 						</Box>
 					)}
 
 					{profile && (
 						<Box>
 							<Text
-								variant="h3"
+								variant="h4"
 								display="flex"
 								pb="sm"
 								mb="0"
@@ -83,10 +91,10 @@ export default function OfferModal({
 								borderColor="#E1E1E1"
 								borderStyle="solid"
 							>
-								<Icons.Remove color="#ffcd00" size="xl" mr="xs"></Icons.Remove>
+								<Icons.Remove color="#ffcd00" size="lg" mr="xs"></Icons.Remove>
 								Profile wanted:
 							</Text>
-							<Text dangerouslySetInnerHTML={{ __html: profile }}></Text>
+							<Text dangerouslySetInnerHTML={{ __html: profile }} lineHeight="1.8"></Text>
 						</Box>
 					)}
 				</Modal.Body>

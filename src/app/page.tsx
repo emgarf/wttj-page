@@ -25,5 +25,9 @@ export default function Home() {
 		);
 	};
 
-	return <Box p="xl">{fetchedContent()}</Box>;
+	return (
+		<Box p="xl" w={{ _: '100%', lg: '960px' }} m="auto">
+			{fetchedContent()}
+		</Box>
+	);
 }
