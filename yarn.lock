@@ -101,7 +101,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.22.5"
 
-"@babel/runtime@^7.20.7":
+"@babel/runtime@^7.14.8", "@babel/runtime@^7.20.7":
   version "7.22.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.5.tgz"
   integrity sha512-ecjvYlnAaZ/KVneE/OdKYBYfgXV3Ptu6zQWmgEF7vwKhQnvVS6bjMD2XYgj+SNvQ1GfK/pjgokfPkC/2CO8CuA==
@@ -545,6 +545,15 @@
     "@welcome-ui/utils" "^5.0.0-alpha.37"
     reakit "^1.3.11"
 
+"@welcome-ui/clear-button@^5.0.0-alpha.29":
+  version "5.0.0-alpha.40"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/clear-button/-/clear-button-5.0.0-alpha.40.tgz#86eaeb155b4bfafdfc9a467336e298d210b618c5"
+  integrity sha512-a37JiciOxuCNsNUlKnVIn4J41d3wH85L4DeqTV9T/u1AQQyX21TS+9WN88p65z0ga02dZ5Y4kjHs+z1DjJzQBw==
+  dependencies:
+    "@welcome-ui/button" "^5.0.0-alpha.40"
+    "@welcome-ui/icons" "^5.0.0-alpha.40"
+    "@welcome-ui/system" "^5.0.0-alpha.40"
+
 "@welcome-ui/close-button@^5.0.0-alpha.29":
   version "5.0.0-alpha.40"
   resolved "https://registry.yarnpkg.com/@welcome-ui/close-button/-/close-button-5.0.0-alpha.40.tgz#2fdcae4af2bd24aa5b7c579c6ca5f47c3e8088fb"
@@ -563,7 +572,33 @@
     "@welcome-ui/utils" "^4.2.0"
     ramda "^0.28.0"
 
-"@welcome-ui/icon@^5.0.0-alpha.40":
+"@welcome-ui/field-group@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/field-group/-/field-group-5.0.0-alpha.29.tgz#0b2ffc26eb20eed06a1f6bfabb7212031d0c9d04"
+  integrity sha512-78pRiY7LuNf1555m4E8I5V1dSExgLRUByoTDDQ05UNfong55M0kD4QFWoBf91Ar+AAU+9h+ovH3S8tUZnwzA6A==
+  dependencies:
+    "@welcome-ui/label" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+
+"@welcome-ui/field@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/field/-/field-5.0.0-alpha.29.tgz#9d7379f4fcc33ebd10941e2123795bb5677fa8c6"
+  integrity sha512-/Q6npYbxxz/9zX4ClwrfZr+RQD25aqKX0ACFQySreH0YiCyKypvW5gpzvuxmiU4PM4tFR8HIEc6fHJ3usyioIg==
+  dependencies:
+    "@welcome-ui/field-group" "^5.0.0-alpha.29"
+    "@welcome-ui/hint" "^5.0.0-alpha.29"
+    "@welcome-ui/label" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+
+"@welcome-ui/hint@^5.0.0-alpha.29":
+  version "5.0.0-alpha.40"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/hint/-/hint-5.0.0-alpha.40.tgz#fcb17444a5f750ecaa1a66c7b43c0c237d7724e2"
+  integrity sha512-D9NqHFd6YzNTWeJGcUvT2eFTnn1jUSQ7AyJKiIzUmlmknenk1EHTXl2YDFa7cXOOkdHBOPJFKQ7iDrRb0w35Rg==
+  dependencies:
+    "@welcome-ui/system" "^5.0.0-alpha.40"
+    "@welcome-ui/utils" "^5.0.0-alpha.37"
+
+"@welcome-ui/icon@^5.0.0-alpha.29", "@welcome-ui/icon@^5.0.0-alpha.40":
   version "5.0.0-alpha.40"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icon/-/icon-5.0.0-alpha.40.tgz#11bdecb6139b0c268f2d54526737ee23b0b03b68"
   integrity sha512-YU9OGZCKuxAE4ONgP5D2n4mTCkquCX5xQpGw/0lvalHyJUldUD0t07WS/nGYmSSt/qyB0TxC+EykxJyd5ebCig==
@@ -577,12 +612,22 @@
   dependencies:
     "@welcome-ui/system" "^4.2.0"
 
-"@welcome-ui/icons@^5.0.0-alpha.40":
+"@welcome-ui/icons@^5.0.0-alpha.29", "@welcome-ui/icons@^5.0.0-alpha.40":
   version "5.0.0-alpha.40"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icons/-/icons-5.0.0-alpha.40.tgz#f3d1e3b504d4074bf115982600402fbf62ba4635"
   integrity sha512-EjGM9HMwcY/vjfCJOmnp7aBkv/NF3q+gB8E8YfkLev5jJBQKRxd0PWKbe6YGXCFrUU4n+eICRCVXS0Tkmljcyg==
   dependencies:
     "@welcome-ui/icon" "^5.0.0-alpha.40"
+
+"@welcome-ui/label@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/label/-/label-5.0.0-alpha.29.tgz#c651516f3a73828dbe11594c9d9d906b180a4519"
+  integrity sha512-gcGxZIHX9p8w8hZQZDRlKKBwt6SbrNsQz4byJhgJkUlNkZI862MxnKGL5wx7+AvvB6mfoQkd0OnL/9M123dYUw==
+  dependencies:
+    "@welcome-ui/icons" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+    "@welcome-ui/utils" "^5.0.0-alpha.29"
+    "@welcome-ui/variant-icon" "^5.0.0-alpha.29"
 
 "@welcome-ui/modal@^5.0.0-alpha.29":
   version "5.0.0-alpha.29"
@@ -597,6 +642,19 @@
     "@welcome-ui/utils" "^5.0.0-alpha.29"
     body-scroll-lock "=3.1.5 "
     reakit "^1.3.11"
+
+"@welcome-ui/search@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/search/-/search-5.0.0-alpha.29.tgz#396a4562c4078007e8ea8bdf133fb6655daafd81"
+  integrity sha512-rHnh9Hl6v7j6XJhDYb7P3NjSd7Z/jmOYttTEhkQoy9gkqJYjv+rgg+3Wh1ME7FN8poZvzP1fMQYbzcXync+UwA==
+  dependencies:
+    "@welcome-ui/clear-button" "^5.0.0-alpha.29"
+    "@welcome-ui/field" "^5.0.0-alpha.29"
+    "@welcome-ui/icon" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+    "@welcome-ui/tag" "^5.0.0-alpha.29"
+    "@welcome-ui/utils" "^5.0.0-alpha.29"
+    downshift "^7.4.1"
 
 "@welcome-ui/shape@^5.0.0-alpha.29":
   version "5.0.0-alpha.40"
@@ -616,6 +674,15 @@
   version "5.0.0-alpha.40"
   resolved "https://registry.yarnpkg.com/@welcome-ui/system/-/system-5.0.0-alpha.40.tgz#8dc59abac47fa381b7dab4e9e2558d419973ddf3"
   integrity sha512-7hQoOYBZNE6euRGdCIm1I5dIkhkV+2C7ufKPymGIWcTnaPLiKt5D/iBlDR8y7DozLewDkrsu5U1cEpITszdxUA==
+
+"@welcome-ui/tag@^5.0.0-alpha.29":
+  version "5.0.0-alpha.40"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/tag/-/tag-5.0.0-alpha.40.tgz#8f4eafc9164ec641fefdc4010c030b076e7e0296"
+  integrity sha512-/NK8JFsZ/GOeTcODx3p6z67puk9LjThlEGrL2LIb/138j2ybenB4WEln9K73u0Ke8oPlsvGmpYRt1vSaAr/PMw==
+  dependencies:
+    "@welcome-ui/icons" "^5.0.0-alpha.40"
+    "@welcome-ui/system" "^5.0.0-alpha.40"
+    "@welcome-ui/utils" "^5.0.0-alpha.37"
 
 "@welcome-ui/text@^4.2.0":
   version "4.2.0"
@@ -640,6 +707,16 @@
   version "5.0.0-alpha.37"
   resolved "https://registry.yarnpkg.com/@welcome-ui/utils/-/utils-5.0.0-alpha.37.tgz#7c66feb45f2a10f72136f91f292b0c9b5be5beee"
   integrity sha512-Qt0l9gTnp7s+w7XXfR0dcWaVE9J23zKuC78eIKtrJVWIdnQq9JxC8OrT1o0eI7hLkhthDFPzDQWRrcyAxZNwoQ==
+
+"@welcome-ui/variant-icon@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/variant-icon/-/variant-icon-5.0.0-alpha.29.tgz#8f106ddfe3535824769505a2ad9a2eb8c3824aa0"
+  integrity sha512-RF7BoP7xCF5ic++cZHTBQaDuveno4SgMxPRvCxAynuFy2MyKp68xVA8+6PmgPTD7yAxtCjhUzxxKUGh9TWDiig==
+  dependencies:
+    "@welcome-ui/box" "^5.0.0-alpha.29"
+    "@welcome-ui/icons" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+    "@welcome-ui/utils" "^5.0.0-alpha.29"
 
 "@xstyled/core@^3.8.0":
   version "3.8.0"
@@ -1075,6 +1152,11 @@ color-support@^1.1.3:
   resolved "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
 
+compute-scroll-into-view@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-2.0.4.tgz#2b444b2b9e4724819d2531efacb7ac094155fdf6"
+  integrity sha512-y/ZA3BGnxoM/QHHQ2Uy49CLtnWPbt4tTPpEEZiEmmiWBFKjej7nEyH8Ryz54jH0MLXflUYA3Er2zUxPSJu5R+g==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
@@ -1221,6 +1303,17 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+downshift@^7.4.1:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-7.6.0.tgz#de04fb2962bd6c4ea94589c797c91f34aa9816f3"
+  integrity sha512-VSoTVynTAsabou/hbZ6HJHUVhtBiVOjQoBsCPcQq5eAROIGP+9XKMp9asAKQ3cEcUP4oe0fFdD2pziUjhFY33Q==
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    compute-scroll-into-view "^2.0.4"
+    prop-types "^15.7.2"
+    react-is "^17.0.2"
+    tslib "^2.3.0"
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2973,7 +3066,7 @@ promise-retry@^2.0.1:
     err-code "^2.0.2"
     retry "^0.12.0"
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -3019,6 +3112,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-is@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
+  integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
 react@^18.2.0:
   version "18.2.0"
@@ -3612,7 +3710,7 @@ tslib@^1.8.1:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.4.0, tslib@^2.5.0:
+tslib@^2.3.0, tslib@^2.4.0, tslib@^2.5.0:
   version "2.6.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.0.tgz"
   integrity sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==
