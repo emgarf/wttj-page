@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Job } from '../interface';
+import { Job, FetchWelcomeData } from '../interface';
 
 export default function UseFetch(url: string) {
 	const [data, setData] = useState<[] | Job[]>([]);
@@ -10,11 +10,11 @@ export default function UseFetch(url: string) {
 	useEffect(() => {
 		fetch(url)
 			.then((res) => res.json())
-			.then((result) => {
+			.then((result: FetchWelcomeData) => {
 				setLoading(false);
 				setData(result?.jobs);
 			})
-			.catch(setError)
+			.catch((error) => setError(error.message))
 			.finally(() => setLoading(false));
 	}, [url]);
 
