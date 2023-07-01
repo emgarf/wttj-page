@@ -545,15 +545,6 @@
     "@welcome-ui/utils" "^5.0.0-alpha.37"
     reakit "^1.3.11"
 
-"@welcome-ui/checkbox@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/@welcome-ui/checkbox/-/checkbox-4.2.0.tgz"
-  integrity sha512-YHGWlV1rXkOMzaSPhG+PJMVXqDRopyPX6f63yznh5FTEQiC0A5IGIJd7h+cExb9TQDD6OcwUjAwG9zlLkfL+Hw==
-  dependencies:
-    "@welcome-ui/system" "^4.2.0"
-    "@welcome-ui/utils" "^4.2.0"
-    reakit "^1.3.11"
-
 "@welcome-ui/clear-button@^5.0.0-alpha.29":
   version "5.0.0-alpha.40"
   resolved "https://registry.npmjs.org/@welcome-ui/clear-button/-/clear-button-5.0.0-alpha.40.tgz"
@@ -589,24 +580,6 @@
     "@welcome-ui/label" "^5.0.0-alpha.29"
     "@welcome-ui/system" "^5.0.0-alpha.29"
 
-"@welcome-ui/field-group@^5.0.0-alpha.40":
-  version "5.0.0-alpha.40"
-  resolved "https://registry.npmjs.org/@welcome-ui/field-group/-/field-group-5.0.0-alpha.40.tgz"
-  integrity sha512-2nfI27/cIieAlJaiDtIV/Fsg95a9AiDDlrwf0mXbpWKewCKmS3Mk5ipnElSe+qoIshzM/ZXlxP9xrXrXma5CZw==
-  dependencies:
-    "@welcome-ui/label" "^5.0.0-alpha.40"
-    "@welcome-ui/system" "^5.0.0-alpha.40"
-
-"@welcome-ui/field@5.0.0-alpha.40":
-  version "5.0.0-alpha.40"
-  resolved "https://registry.npmjs.org/@welcome-ui/field/-/field-5.0.0-alpha.40.tgz"
-  integrity sha512-qhQi6PpT5cV7dGySp6hWQwycYJv2uiyICdzZd60yWNzb/57jFNCJvPCZRAEmbAQNz0Nr7Y4luW2oqX8KpgTjAQ==
-  dependencies:
-    "@welcome-ui/field-group" "^5.0.0-alpha.40"
-    "@welcome-ui/hint" "^5.0.0-alpha.40"
-    "@welcome-ui/label" "^5.0.0-alpha.40"
-    "@welcome-ui/system" "^5.0.0-alpha.40"
-
 "@welcome-ui/field@^5.0.0-alpha.29":
   version "5.0.0-alpha.29"
   resolved "https://registry.npmjs.org/@welcome-ui/field/-/field-5.0.0-alpha.29.tgz"
@@ -617,7 +590,7 @@
     "@welcome-ui/label" "^5.0.0-alpha.29"
     "@welcome-ui/system" "^5.0.0-alpha.29"
 
-"@welcome-ui/hint@^5.0.0-alpha.29", "@welcome-ui/hint@^5.0.0-alpha.40":
+"@welcome-ui/hint@^5.0.0-alpha.29":
   version "5.0.0-alpha.40"
   resolved "https://registry.npmjs.org/@welcome-ui/hint/-/hint-5.0.0-alpha.40.tgz"
   integrity sha512-D9NqHFd6YzNTWeJGcUvT2eFTnn1jUSQ7AyJKiIzUmlmknenk1EHTXl2YDFa7cXOOkdHBOPJFKQ7iDrRb0w35Rg==
@@ -666,15 +639,14 @@
     "@welcome-ui/utils" "^5.0.0-alpha.29"
     "@welcome-ui/variant-icon" "^5.0.0-alpha.29"
 
-"@welcome-ui/label@^5.0.0-alpha.40":
-  version "5.0.0-alpha.40"
-  resolved "https://registry.npmjs.org/@welcome-ui/label/-/label-5.0.0-alpha.40.tgz"
-  integrity sha512-3c78/7KfUuiGWHGS/C3+DUC2rhLPfTdyt+gZRxk9sJwrXp/8ZpPrkrqYMMDIOjG7teETEc91kTnXzM3gn9Gj5g==
+"@welcome-ui/link@^5.0.0-alpha.29":
+  version "5.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/link/-/link-5.0.0-alpha.29.tgz#6baac5757d809671f1bd7590b5078c6cf9290e4a"
+  integrity sha512-9eBMH7orTtWOCmnYD+0p+a4xd0wP9YDbs5TjAVV3iFDnXQG3Ppfx2oAJ/uZny4UjStm4WU9A/R8Ch3Y6CODgow==
   dependencies:
-    "@welcome-ui/icons" "^5.0.0-alpha.40"
-    "@welcome-ui/system" "^5.0.0-alpha.40"
-    "@welcome-ui/utils" "^5.0.0-alpha.37"
-    "@welcome-ui/variant-icon" "^5.0.0-alpha.40"
+    "@welcome-ui/icons" "^5.0.0-alpha.29"
+    "@welcome-ui/system" "^5.0.0-alpha.29"
+    "@welcome-ui/universal-link" "^5.0.0-alpha.29"
 
 "@welcome-ui/loader@^5.0.0-alpha.29":
   version "5.0.0-alpha.29"
@@ -726,6 +698,14 @@
     downshift "^7.4.1"
     match-sorter "^6.3.1"
 
+"@welcome-ui/shape@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/shape/-/shape-4.2.0.tgz#ad319c90f0bbf5f5cc590571e2e51586cd69d3f3"
+  integrity sha512-V4AwQTIThExy36z9OpJtDDNzzof2H1mIH3Tx7GRqAmE/DmaDumbyHGN98cmEDaEDnGci7HD15YTuMtTYekzDPg==
+  dependencies:
+    "@welcome-ui/system" "^4.2.0"
+    "@welcome-ui/utils" "^4.2.0"
+
 "@welcome-ui/shape@^5.0.0-alpha.29":
   version "5.0.0-alpha.40"
   resolved "https://registry.npmjs.org/@welcome-ui/shape/-/shape-5.0.0-alpha.40.tgz"
@@ -768,6 +748,13 @@
   dependencies:
     "@welcome-ui/system" "^5.0.0-alpha.40"
 
+"@welcome-ui/universal-link@^5.0.0-alpha.29":
+  version "5.0.0-alpha.40"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/universal-link/-/universal-link-5.0.0-alpha.40.tgz#87997d3b1f39d76d0682b1b5fdda892c4c62e47b"
+  integrity sha512-8ZaXVVqdnelCkbobijiWJ8d6ahoAhKupgLtH+IHpUug/yAj8qGlhmmeg3ilvjxFEpCtsL2zd9yj1uASwTBS3Qw==
+  dependencies:
+    "@welcome-ui/system" "^5.0.0-alpha.40"
+
 "@welcome-ui/utils@^4.2.0":
   version "4.2.0"
   resolved "https://registry.npmjs.org/@welcome-ui/utils/-/utils-4.2.0.tgz"
@@ -787,16 +774,6 @@
     "@welcome-ui/icons" "^5.0.0-alpha.29"
     "@welcome-ui/system" "^5.0.0-alpha.29"
     "@welcome-ui/utils" "^5.0.0-alpha.29"
-
-"@welcome-ui/variant-icon@^5.0.0-alpha.40":
-  version "5.0.0-alpha.40"
-  resolved "https://registry.npmjs.org/@welcome-ui/variant-icon/-/variant-icon-5.0.0-alpha.40.tgz"
-  integrity sha512-lFZYc7mSgJJNGciPXyyO6HRSI03hD5RRK9PX037vlCD6YsLxsNORwSTCsBZGBZTcKZcuUVr1k1ELbGYVxvVyuA==
-  dependencies:
-    "@welcome-ui/box" "^5.0.0-alpha.40"
-    "@welcome-ui/icons" "^5.0.0-alpha.40"
-    "@welcome-ui/system" "^5.0.0-alpha.40"
-    "@welcome-ui/utils" "^5.0.0-alpha.37"
 
 "@xstyled/core@^3.7.3":
   version "3.8.0"

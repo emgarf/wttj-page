@@ -4,6 +4,7 @@ import { Button } from '@welcome-ui/button';
 import { Text } from '@welcome-ui/text';
 import { Job, WebsitesURL } from '../interface';
 import { Icons } from '@welcome-ui/icons.font';
+import { Link } from '@welcome-ui/link';
 import { Modal, useModalState } from '@welcome-ui/modal';
 import OfferModal from './modal';
 import moment from 'moment';
@@ -42,9 +43,11 @@ export default function Offer({ data }: { data: Job }) {
 			flexWrap={{ _: 'wrap', md: 'nowrap' }}
 		>
 			<Box p="md">
-				<Text variant="h3" m="0">
-					{name}
-				</Text>
+				<Modal.Trigger as={Link} {...modal}>
+					<Text variant="h3" m="0">
+						{name}
+					</Text>
+				</Modal.Trigger>
 
 				<Box mx="0" mt="md" mb="0" display="flex" flexWrap="wrap" alignItems="center">
 					<Text m="0" mr="lg" display="flex" alignItems="center">
@@ -65,11 +68,11 @@ export default function Offer({ data }: { data: Job }) {
 			</Box>
 
 			<Box p="md" display="flex" alignItems="center">
-				<Modal.Trigger as={Button} {...modal} variant="tertiary" mr="lg">
+				<Modal.Trigger as={Button} {...modal} variant="secondary-info" mr="lg">
 					See more
 				</Modal.Trigger>
 
-				<Button variant="secondary" as="a" href={wttjUrl[0].url}>
+				<Button variant="primary" as="a" href={wttjUrl[0].url}>
 					Apply
 				</Button>
 			</Box>

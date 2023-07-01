@@ -2,11 +2,10 @@
 import { useState, useEffect, ChangeEvent } from 'react';
 import { Box } from '@welcome-ui/box';
 import { Job } from './interface';
-import { Select } from '@welcome-ui/select';
-import { InputText } from '@welcome-ui/input-text';
 import { sortById } from './utils/utils';
 import OfferList from './components/offerList';
 import useFetch from './utils/fetch';
+import Header from './components/header';
 
 export default function Home() {
 	const { data, loading, error } = useFetch('https://www.welcomekit.co/api/v1/embed?organization_reference=Pg4eV6k');
@@ -19,7 +18,7 @@ export default function Home() {
 		}
 	}, [data]);
 
-	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const eventValue = event.target.value;
 		if (eventValue === undefined) {
 			setSearchItems(data);
@@ -43,28 +42,12 @@ export default function Home() {
 	const results = filterResultsByCategory();
 
 	return (
-		<Box p="xl" w={{ _: '100%', lg: '960px' }} m="auto">
-			<Box display="flex" w="100%">
-				<Box w="100%" pr="lg" pb="lg" minWidth="180px">
-					<InputText placeholder="Search for a job" onChange={handleChange} isClearable={false} />
-				</Box>
-				<Select
-					label="Group by"
-					w="100%"
-					maxWidth="250px"
-					options={[
-						{ label: 'All', value: 'none' },
-						{ label: 'Department', value: 'department' },
-						{ label: 'Office', value: 'office' },
-					]}
-					name="filters"
-					value={selectValues}
-					// @ts-expect-error
-					onChange={handleSelectChange}
-				/>
-			</Box>
+		<>
+			<Header selectValues={selectValues} handleChange={handleInputChange} handleSelectChange={handleSelectChange} />
 
-			<OfferList loading={loading} error={error} data={results} />
-		</Box>
+			<Box p="xl" w={{ _: '100%', lg: '960px' }} m="auto">
+				<OfferList loading={loading} error={error} data={results} />
+			</Box>
+		</>
 	);
 }

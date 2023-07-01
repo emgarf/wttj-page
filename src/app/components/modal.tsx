@@ -79,7 +79,7 @@ export default function OfferModal({
 						</Box>
 					)}
 
-					{profile && (
+					{profile?.length > 50 && (
 						<Box>
 							<Text
 								variant="h4"
@@ -101,11 +101,11 @@ export default function OfferModal({
 
 				<Modal.Footer pb="0" pl="0" pr="0">
 					<Box w="100%">
-						<Button variant="secondary" mr="sm" as="a" href={url[0].url}>
+						<Button variant="primary" mr="sm" as="a" href={url[0].url}>
 							Apply
 						</Button>
 
-						<Button variant="tertiary" onClick={() => onClick()}>
+						<Button variant="secondary-info" onClick={() => onClick()}>
 							Close
 						</Button>
 					</Box>

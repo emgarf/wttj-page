@@ -1,10 +1,29 @@
 'use client';
-
-import { Inter } from 'next/font/google';
 import { createTheme, WuiProvider } from '@welcome-ui/core';
 
-const inter = Inter({ subsets: ['latin'] });
-const theme = createTheme();
+const theme = createTheme({
+	colors: {
+		primary: {
+			100: '#FFF8D9',
+			200: '#FFE166',
+			500: '#FFCD00',
+			600: '#E5B800',
+			700: '#997B00',
+			800: '#735C00',
+			900: '#4C3D00',
+		},
+	},
+	links: {
+		primary: {
+			default: {
+				background: 'none',
+			},
+			hover: {
+				color: '#FFCD00',
+			},
+		},
+	},
+});
 
 // export const metadata = {
 // 	title: 'WTTJ search page',
@@ -15,8 +34,8 @@ const theme = createTheme();
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<WuiProvider theme={theme} hasGlobalStyle>
-				<body className={inter.className}>{children}</body>
+			<WuiProvider theme={theme}>
+				<body>{children}</body>
 			</WuiProvider>
 		</html>
 	);

@@ -16,7 +16,7 @@ export default function OfferList({ loading, error, data }: Props) {
 		return (
 			<Box display="flex" justifyContent="center" mt="20vh" alignItems="center" flexDirection="column">
 				<Text>Please wait while we are fetching your datas</Text>
-				<Loader color="primary-500" size={50} />
+				<Loader color="#FFCD00" size={50} />
 			</Box>
 		);
 	} else if (error) {
