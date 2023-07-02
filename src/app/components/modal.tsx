@@ -105,7 +105,7 @@ export default function OfferModal({
 							Apply
 						</Button>
 
-						<Button variant="secondary-info" onClick={() => onClick()}>
+						<Button variant="tertiary" onClick={() => onClick()}>
 							Close
 						</Button>
 					</Box>

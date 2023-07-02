@@ -1,29 +1,8 @@
 'use client';
 import { createTheme, WuiProvider } from '@welcome-ui/core';
+import { themeOptions } from './utils/theme';
 
-const theme = createTheme({
-	colors: {
-		primary: {
-			100: '#FFF8D9',
-			200: '#FFE166',
-			500: '#FFCD00',
-			600: '#E5B800',
-			700: '#997B00',
-			800: '#735C00',
-			900: '#4C3D00',
-		},
-	},
-	links: {
-		primary: {
-			default: {
-				background: 'none',
-			},
-			hover: {
-				color: '#FFCD00',
-			},
-		},
-	},
-});
+const theme = createTheme(themeOptions());
 
 // export const metadata = {
 // 	title: 'WTTJ search page',

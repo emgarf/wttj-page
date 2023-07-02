@@ -42,7 +42,7 @@ export default function Header({
 				</Shape>
 				<Box display="flex" w="100%">
 					<Box w="100%" pr="lg" minWidth="180px">
-						<InputText placeholder="Search for a job" onChange={handleChange} isClearable={false} />
+						<InputText placeholder="Search for a job" onChange={handleChange} isClearable />
 					</Box>
 					<Select
 						w="100%"

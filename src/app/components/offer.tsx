@@ -18,6 +18,7 @@ export default function Offer({ data }: { data: Job }) {
 		published_at,
 		created_at,
 		description,
+		department,
 		recruitment_process,
 		profile,
 	} = data;
@@ -37,8 +38,8 @@ export default function Offer({ data }: { data: Job }) {
 			borderWidth="1px"
 			borderStyle="solid"
 			borderColor="rgba(0, 0, 0, 0.1)"
-			borderRadius="sm"
-			margin="sm"
+			mb="xl"
+			p="md"
 			minWidth="100%"
 			flexWrap={{ _: 'wrap', md: 'nowrap' }}
 		>
@@ -50,17 +51,22 @@ export default function Offer({ data }: { data: Job }) {
 				</Modal.Trigger>
 
 				<Box mx="0" mt="md" mb="0" display="flex" flexWrap="wrap" alignItems="center">
-					<Text m="0" mr="lg" display="flex" alignItems="center">
+					<Text m="0" mr="lg" display="flex" lineHeight="25px" alignItems="center">
 						<Icons.Copy mr="xxs" />
 						{contract_type.en}
 					</Text>
 
-					<Text m="0" mr="lg" display="flex" alignItems="center">
+					<Text m="0" mr="lg" display="flex" lineHeight="25px" alignItems="center">
 						<Icons.Map mr="xxs" />
 						{office.name}
 					</Text>
 
-					<Text m="0" display="flex" alignItems="center">
+					<Text m="0" mr="lg" display="flex" lineHeight="25px" alignItems="center">
+						<Icons.Spanner mr="xxs" />
+						{department?.name ?? 'Other'}
+					</Text>
+
+					<Text m="0" display="flex" lineHeight="25px" alignItems="center">
 						<Icons.Clock mr="xxs" />
 						{moment(published_at).fromNow()}
 					</Text>
@@ -68,7 +74,7 @@ export default function Offer({ data }: { data: Job }) {
 			</Box>
 
 			<Box p="md" display="flex" alignItems="center">
-				<Modal.Trigger as={Button} {...modal} variant="secondary-info" mr="lg">
+				<Modal.Trigger as={Button} {...modal} variant="tertiary" mr="lg">
 					See more
 				</Modal.Trigger>
 
