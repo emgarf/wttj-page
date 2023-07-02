@@ -28,6 +28,15 @@ export default function OfferList({ loading, error, data }: Props) {
 			</Box>
 		);
 	} else {
+		if (!data.length) {
+			return (
+				<Box textAlign="center" mt="10vh">
+					<Text fontSize="1.5em" w="100%">
+						Looks like there are no results matching your filters. :(
+					</Text>
+				</Box>
+			);
+		}
 		return (
 			<Box display="flex" w="100%" alignItems="center" justifyContent="center" flexWrap="wrap">
 				{data.map((item) => {
