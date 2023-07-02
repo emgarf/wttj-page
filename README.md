@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to the WTTJ test project
 
 ## Getting Started
 
-First, run the development server:
+You must use `yarn install` to setup the project
+
+Then, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Actions possible on the project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Search for a specific job
+- Sort the jobs by department (by default), by office or by nothing
+- Filter the jobs by type of contracts (Full-time, internship, temporary, other)
+- Click on the title of each job to see more information inside a modal
+- Click on the "See more" button to also see more information inside a modal
+- Click on the Apply button to get redirected to another page
 
-## Learn More
+## Other informations
 
-To learn more about Next.js, take a look at the following resources:
+The site has a live version accessible here: https://wttj-page.netlify.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Here are some screenshots of the app running:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt text](https://github.com/emgarf/wttj-page/assets/5755673/ded9d260-e313-4824-acda-f7be48cb8e24)
+![alt text](https://github.com/emgarf/wttj-page/assets/5755673/cfb726e1-4620-44ad-9c95-75347a684553)
+![alt text](https://github.com/emgarf/wttj-page/assets/5755673/608045e6-a2e2-488a-bfb3-82a7a5e4fba8)
