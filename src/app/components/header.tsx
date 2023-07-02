@@ -2,12 +2,10 @@
 import { ChangeEvent } from 'react';
 import { Box } from '@welcome-ui/box';
 import { Shape } from '@welcome-ui/shape';
-import { InputText } from '@welcome-ui/input-text';
-import { Select } from '@welcome-ui/select';
-import { Text } from '@welcome-ui/text';
-import { Checkbox } from '@welcome-ui/checkbox';
-import { optionsGroup, optionsFilters } from '../utils/constants';
 import Image from 'next/image';
+import GroupBy from './groupBy';
+import FilterBy from './filterBy';
+import Search from './search';
 
 export default function Header({
 	selectGroupValues,
@@ -42,48 +40,9 @@ export default function Header({
 					/>
 				</Shape>
 				<Box display="flex" w="100%" flexWrap="wrap">
-					<Box flex="1" pr="xxs" minWidth="180px" mb="xxs">
-						<Text mt="0" mb="xxs" fontSize="0.8em">
-							Your dream job?
-						</Text>
-						<InputText placeholder="Search for a job" onChange={handleChange} isClearable />
-					</Box>
-
-					<Box maxWidth="200px" pr="xxs" minWidth="130px" flex="0.5" mb="xxs">
-						<Text mt="0" mb="xxs" fontSize="0.8em">
-							Group By:
-						</Text>
-						<Select options={optionsGroup} name="groups" value={selectGroupValues} onChange={handleSelectChange} />
-					</Box>
-
-					<Box maxWidth="200px" minWidth="160px" flex="0.5" mb="xxs">
-						<Text mt="0" mb="xxs" fontSize="0.8em">
-							Filter By:
-						</Text>
-						<Select
-							isMultiple
-							options={optionsFilters}
-							name="filters"
-							allowUnselectFromList
-							disableCloseOnSelect
-							onChange={handleFilterChange}
-							value={selectFiltersValues}
-							renderItem={(item, selected) => {
-								return (
-									<Box display="flex" justifyContent="flex-start" alignItems="center">
-										<Box mr="xxl">
-											<Checkbox type="checkbox" checked={selected} />
-										</Box>
-										{/* @ts-expect-error */}
-										{item.label}
-									</Box>
-								);
-							}}
-							renderMultiple={() => {
-								return <></>;
-							}}
-						/>
-					</Box>
+					<Search handleChange={handleChange} />
+					<GroupBy handleSelectChange={handleSelectChange} selectGroupValues={selectGroupValues} />
+					<FilterBy selectFiltersValues={selectFiltersValues} handleFilterChange={handleFilterChange} />
 				</Box>
 			</Box>
 		</Box>
