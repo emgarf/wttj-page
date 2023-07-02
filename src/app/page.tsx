@@ -42,7 +42,7 @@ export default function Home() {
 		if (filterBy && filterBy?.length > 0) {
 			setResults(sortedResults.filter((item) => filterBy?.includes(item.contract_type.en)));
 		}
-	}, [data, search, loading, groupBy, filterBy, results]);
+	}, [data, search, loading, groupBy, filterBy]);
 
 	return (
 		<>

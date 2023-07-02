@@ -6,6 +6,7 @@ import { InputText } from '@welcome-ui/input-text';
 import { Select } from '@welcome-ui/select';
 import { Text } from '@welcome-ui/text';
 import { Checkbox } from '@welcome-ui/checkbox';
+import { optionsGroup, optionsFilters } from '../utils/constants';
 import Image from 'next/image';
 
 export default function Header({
@@ -21,19 +22,6 @@ export default function Header({
 	handleFilterChange: any;
 	handleSelectChange: ((value: any) => void) | undefined;
 }) {
-	const optionsGroup = [
-		{ label: 'No group', value: 'none' },
-		{ label: 'Department', value: 'department' },
-		{ label: 'Office', value: 'office' },
-	];
-
-	const optionsFilters = [
-		{ label: 'Full-Time', value: 'Full-Time' },
-		{ label: 'Internship', value: 'Internship' },
-		{ label: 'Temporary', value: 'Temporary' },
-		{ label: 'Other', value: 'Other' },
-	];
-
 	return (
 		<Box w="100%" position="sticky" top="0" left="0" borderBottom="1px solid black" background="white" zIndex="999">
 			<Box
