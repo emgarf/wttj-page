@@ -15,6 +15,7 @@
 		"@types/styled-components": "^5.1.26",
 		"@welcome-ui/box": "^4.2.0",
 		"@welcome-ui/button": "^4.2.0",
+		"@welcome-ui/checkbox": "^4.2.0",
 		"@welcome-ui/core": "^4.4.1",
 		"@welcome-ui/icons.font": "^4.5.0",
 		"@welcome-ui/input-text": "^5.0.0-alpha.29",
